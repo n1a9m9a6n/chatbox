@@ -12,9 +12,9 @@ from keras.models import load_model
 model = load_model('chatbot_model.h5')
 import json
 import random
-intents = json.loads(open('D:/Data Science/Projects/Chat Bot/intents.json').read())
-words = pickle.load(open("D:/Data Science/Projects/Chat Bot/words.pkl",'rb'))
-classes = pickle.load(open('D:/Data Science/Projects/Chat Bot/classes.pkl','rb'))
+intents = json.loads(open('intents.json').read())
+words = pickle.load(open("words.pkl",'rb'))
+classes = pickle.load(open("classes.pkl",'rb'))
 
 
 def clean_up_sentence(sentence):
@@ -83,7 +83,7 @@ words=[]
 classes = []
 documents = []
 ignore_words = ['?', '!']
-data_file = open('D:/Data Science/Projects/Chat Bot/intents.json').read()
+data_file = open("intents.json").read()
 intents = json.loads(data_file)
 
 
